@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, X, ArrowUpRight, Info } from 'lucide-react';
+import { ExternalLink, X, ArrowUpRight, Info } from 'lucide-react';
 import { projects } from '@/lib/data';
 import SectionHeading from './ui/SectionHeading';
 
@@ -92,14 +92,6 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
                 hover:opacity-90 transition-opacity">
               <ExternalLink size={15} />
               Live Demo
-            </a>
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl
-                font-semibold text-sm border border-[var(--border)]
-                text-[var(--text-secondary)] hover:border-brand-primary/40
-                hover:text-brand-primary-light transition-all">
-              <Github size={15} />
-              Source Code
             </a>
           </div>
         </div>
@@ -201,10 +193,6 @@ function ProjectCard({ project, index, onClick }: { project: Project; index: num
             transition-colors">
             <ExternalLink size={14} />
           </span>
-          <span aria-label="GitHub" className="text-[var(--text-muted)] hover:text-brand-primary-light
-            transition-colors">
-            <Github size={14} />
-          </span>
         </div>
       </div>
     </motion.div>
@@ -273,7 +261,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Placeholder note */}
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -282,7 +270,7 @@ export default function Projects() {
           <Info size={13} className="inline mr-1 text-amber-400" />
           Projects marked &quot;Placeholder&quot; are representative of professional work. Live links are placeholders — update them in{' '}
           <code className="text-brand-primary-light text-xs">lib/data.ts</code>.
-        </motion.p>
+        </motion.p> */}
       </div>
 
       {/* Modal */}

@@ -21,7 +21,7 @@ export default function Experience() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Work Experience"
-          subtitle="My professional journey — from quality assurance to full-stack development over 4+ years."
+          subtitle="My professional journey — from quality assurance to full-stack development over 5+ years."
           tag="Career Path"
         />
 

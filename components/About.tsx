@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { MapPin, Download, Briefcase, GraduationCap, Linkedin, Github, Mail } from 'lucide-react';
 import { personalInfo, stats, education, certifications } from '@/lib/data';
 import SectionHeading from './ui/SectionHeading';
@@ -41,11 +42,14 @@ export default function About() {
             <div className="relative group">
               <div className="w-52 h-52 sm:w-64 sm:h-64 rounded-3xl overflow-hidden relative
                 border border-brand-primary/20 shadow-2xl shadow-brand-primary/20">
-                {/* Gradient avatar */}
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary via-brand-purple to-brand-accent
-                  flex items-center justify-center">
-                  <span className="text-7xl font-black text-white/90 select-none">AP</span>
-                </div>
+                {/* Profile photo */}
+                <Image
+                  src="/avatar.jpg"
+                  alt={personalInfo.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
                 {/* Shimmer overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 opacity-0
                   group-hover:opacity-100 transition-opacity duration-500" />

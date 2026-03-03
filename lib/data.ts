@@ -18,10 +18,10 @@ export const personalInfo = {
   email: 'arunfrnds80@gmail.com',
   phone: '+91 8340888770',
   linkedin: 'https://www.linkedin.com/in/arun-prasad-b6ab071aa/',
-  github: 'https://github.com/', // [PLACEHOLDER — add your GitHub profile URL]
+  github: 'https://github.com/arun8340', // [PLACEHOLDER — add your GitHub profile URL]
   summary:
-    'Software Developer with 4+ years of experience, having completed my MCA, specializing in mobile, web, and backend application development. Strong experience in building cross-platform mobile applications using Flutter and Dart, and web applications using React.js and Next.js, with backend development using LoopBack 4, TypeScript, and MongoDB. Along with development, I have hands-on experience in UI/UX design. Experienced in working within Agile teams, collaborating with product, QA, and design stakeholders to deliver scalable, high-performance, and user-friendly applications.',
-  resumeUrl: '#', // [PLACEHOLDER — link to hosted PDF resume]
+    'Software Developer with 5+ years of experience, having completed my MCA, specializing in mobile, web, and backend application development. Strong experience in building cross-platform mobile applications using Flutter and Dart, and web applications using React.js and Next.js, with backend development using LoopBack 4, TypeScript, and MongoDB. Along with development, I have hands-on experience in UI/UX design. Experienced in working within Agile teams, collaborating with product, QA, and design stakeholders to deliver scalable, high-performance, and user-friendly applications.',
+  resumeUrl: '/resume.pdf', // [PLACEHOLDER — link to hosted PDF resume]
 };
 
 // ─── Skills ───────────────────────────────────────────────────────────────
@@ -180,6 +180,36 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
+    title: 'ArkaDevelopers — Real Estate Company Site',
+    description:
+      "A design-driven corporate website for a real estate development firm, built with Next.js, showcasing architectural projects, services, and the company's philosophy.",
+    longDescription:
+      "Developed using Next.js with a modular component architecture, this site presents Arka Developers — a real estate firm specializing in architectural design, sustainable innovation, and project execution. Features include a responsive layout, smooth navigation, project showcases, and service sections that reflect the brand's quality-first ethos.",
+    tech: ['Next.js', 'React', 'CSS', 'JavaScript'],
+    category: 'Full-Stack',
+    gradient: 'from-slate-600 via-blue-700 to-indigo-700',
+    liveUrl: 'https://thearkadevelopers.com',
+    githubUrl: '#', // [PLACEHOLDER]
+    featured: true,
+    isPlaceholder: false,
+  },
+  {
+    id: 2,
+    title: 'ArkenElements — Home & Workspace Design Site',
+    description:
+      'A premium WordPress website for a home and workspace design company offering interior solutions, home automation, and innovative lifestyle products.',
+    longDescription:
+      'Built on WordPress with Elementor Pro, this site represents ArkenElements — a multidisciplinary brand combining interior architecture, home automation, water purification, and designer appliances. Features curated product pages, service sections, sustainability highlights, and consultation call-to-actions, all styled to reflect a premium and innovative brand identity.',
+    tech: ['WordPress', 'Elementor', 'PHP', 'CSS', 'JavaScript'],
+    category: 'CMS',
+    gradient: 'from-teal-600 via-cyan-600 to-sky-600',
+    liveUrl: 'https://arkenelements.com',
+    githubUrl: '#', // [PLACEHOLDER]
+    featured: true,
+    isPlaceholder: false,
+  },
+  {
+    id: 3,
     title: 'AnimaWeb — GSAP Experience',
     description:
       'A visually rich website featuring advanced page transition animations, scroll-based storytelling effects, and interactive UI components built with GSAP and custom JavaScript.',
@@ -194,22 +224,7 @@ export const projects = [
     isPlaceholder: false,
   },
   {
-    id: 2,
-    title: 'FlowApp — Next.js Web Application',
-    description:
-      'A modern web application built with Next.js and Framer Motion delivering smooth page transitions, micro-interactions, and an exceptional user experience.',
-    longDescription:
-      'Built using the Next.js App Router with React Server Components for optimal performance. Implements Framer Motion\'s layout animations and shared element transitions. Features include animated dashboards, skeleton loaders, and gesture-driven interactions.',
-    tech: ['Next.js', 'React', 'Framer Motion', 'Tailwind CSS'],
-    category: 'Full-Stack',
-    gradient: 'from-cyan-600 via-blue-600 to-indigo-700',
-    liveUrl: '#', // [PLACEHOLDER]
-    githubUrl: '#', // [PLACEHOLDER]
-    featured: true,
-    isPlaceholder: false,
-  },
-  {
-    id: 3,
+    id: 4,
     title: 'HealthSync — Flutter Mobile App',
     description:
       '[Professional project] Cross-platform mobile application for the healthcare domain with real-time data, offline support, and intuitive UX across Android & iOS.',
@@ -220,11 +235,26 @@ export const projects = [
     gradient: 'from-emerald-600 via-teal-600 to-cyan-600',
     liveUrl: '#', // [PLACEHOLDER]
     githubUrl: '#', // [PLACEHOLDER]
-    featured: true,
+    featured: false,
     isPlaceholder: true, // Marks as professional project / placeholder
   },
   {
-    id: 4,
+    id: 5,
+    title: 'FlowApp — Next.js Web Application',
+    description:
+      'A modern web application built with Next.js and Framer Motion delivering smooth page transitions, micro-interactions, and an exceptional user experience.',
+    longDescription:
+      'Built using the Next.js App Router with React Server Components for optimal performance. Implements Framer Motion\'s layout animations and shared element transitions. Features include animated dashboards, skeleton loaders, and gesture-driven interactions.',
+    tech: ['Next.js', 'React', 'Framer Motion', 'Tailwind CSS'],
+    category: 'Full-Stack',
+    gradient: 'from-cyan-600 via-blue-600 to-indigo-700',
+    liveUrl: '#', // [PLACEHOLDER]
+    githubUrl: '#', // [PLACEHOLDER]
+    featured: false,
+    isPlaceholder: false,
+  },
+  {
+    id: 6,
     title: 'NimbusStore — Shopify E-Commerce',
     description:
       'A fully configured Shopify e-commerce store with custom theme, product catalogues, payment gateway integration, and store optimization.',
@@ -233,36 +263,6 @@ export const projects = [
     tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS'],
     category: 'E-Commerce',
     gradient: 'from-orange-600 via-amber-600 to-yellow-600',
-    liveUrl: '#', // [PLACEHOLDER]
-    githubUrl: '#', // [PLACEHOLDER]
-    featured: false,
-    isPlaceholder: false,
-  },
-  {
-    id: 5,
-    title: 'Verde — WordPress Business Site',
-    description:
-      'A professional WordPress website with custom theme, plugin integration, responsive layouts, and on-page SEO optimization.',
-    longDescription:
-      'Fully responsive WordPress site built with custom theme development, ACF Pro for dynamic content, WooCommerce integration, Yoast SEO setup, performance optimization using caching plugins, and Google Analytics integration.',
-    tech: ['WordPress', 'PHP', 'CSS', 'JavaScript', 'SEO'],
-    category: 'CMS',
-    gradient: 'from-lime-600 via-green-600 to-emerald-600',
-    liveUrl: '#', // [PLACEHOLDER]
-    githubUrl: '#', // [PLACEHOLDER]
-    featured: false,
-    isPlaceholder: false,
-  },
-  {
-    id: 6,
-    title: 'Scroll Stories — Animated Site',
-    description:
-      'A second GSAP-powered interactive website with scroll-triggered storytelling, custom cursor effects, and immersive page transitions.',
-    longDescription:
-      'Experiments in advanced GSAP animation techniques — horizontal scroll sections, parallax depth layers, custom cursor with magnetic effect on interactive elements, and timeline-based reveal animations synced to page scroll position.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'GSAP', 'ScrollTrigger'],
-    category: 'Frontend',
-    gradient: 'from-fuchsia-600 via-pink-600 to-rose-600',
     liveUrl: '#', // [PLACEHOLDER]
     githubUrl: '#', // [PLACEHOLDER]
     featured: false,
@@ -316,7 +316,7 @@ export const certifications = [
 
 // ─── Key stats ─────────────────────────────────────────────────────────────
 export const stats = [
-  { label: 'Years Experience', value: '4+', icon: '⚡' },
+  { label: 'Years Experience', value: '5+', icon: '⚡' },
   { label: 'Projects Delivered', value: '15+', icon: '🚀' },
   { label: 'Technologies', value: '20+', icon: '🛠️' },
   { label: 'Certifications', value: '2', icon: '🏅' },

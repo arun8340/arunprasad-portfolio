@@ -23,7 +23,7 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Skills & Technologies"
-          subtitle="A broad toolkit built over 4+ years of hands-on development across mobile, web, and backend domains."
+          subtitle="A broad toolkit built over 5+ years of hands-on development across mobile, web, and backend domains."
           tag="What I Know"
         />
 

@@ -12,7 +12,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: 'Arun Prasad — Software Developer',
   description:
-    'Personal portfolio of Molleti Venkata Arun Prasad — Software Developer specializing in Flutter, React.js, Next.js, LoopBack 4, and MongoDB. 4+ years building mobile, web, and backend applications.',
+    'Personal portfolio of Molleti Venkata Arun Prasad — Software Developer specializing in Flutter, React.js, Next.js, LoopBack 4, and MongoDB. 5+ years building mobile, web, and backend applications.',
   keywords: [
     'Flutter Developer',
     'React Developer',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Arun Prasad — Software Developer',
     description:
-      'Software Developer with 4+ years of experience in Flutter, React.js, Next.js, and LoopBack 4.',
+      'Software Developer with 5+ years of experience in Flutter, React.js, Next.js, and LoopBack 4.',
     siteName: 'Arun Prasad Portfolio',
   },
   twitter: {

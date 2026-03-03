@@ -31,15 +31,20 @@ export default function Contact() {
 
   const onSubmit = async (data: FormData) => {
     setSubmitStatus('loading');
-    // [PLACEHOLDER] — Integrate EmailJS, Resend, or a serverless function here.
-    // Example: await emailjs.send(serviceId, templateId, data, publicKey);
-    console.log('Form data:', data);
-
-    // Simulate async submit
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitStatus('success');
-    reset();
-    setTimeout(() => setSubmitStatus('idle'), 5000);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Submit failed');
+      setSubmitStatus('success');
+      reset();
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } catch {
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }
   };
 
   const contactItems = [
@@ -226,6 +231,22 @@ export default function Contact() {
                     className="space-y-5"
                     noValidate
                   >
+                    {/* Error banner */}
+                    <AnimatePresence>
+                      {submitStatus === 'error' && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -8 }}
+                          className="flex items-center gap-3 px-4 py-3 rounded-xl
+                            bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm font-medium"
+                        >
+                          <AlertCircle size={16} className="shrink-0" />
+                          Something went wrong. Please try again or email me directly.
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
                     {/* Name + Email row */}
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
