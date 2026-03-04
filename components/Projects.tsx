@@ -199,12 +199,22 @@ function ProjectCard({ project, index, onClick }: { project: Project; index: num
   );
 }
 
+const PAGE_SIZE = 6;
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState('All');
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category)))];
   const filtered = filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+  const handleFilterChange = (cat: string) => {
+    setFilter(cat);
+    setVisibleCount(PAGE_SIZE);
+  };
 
   return (
     <section
@@ -234,7 +244,7 @@ export default function Projects() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
+              onClick={() => handleFilterChange(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200
                 ${filter === cat
                   ? 'bg-brand-primary text-white shadow-md shadow-brand-primary/40'
@@ -249,7 +259,7 @@ export default function Projects() {
         {/* Projects grid */}
         <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((project, i) => (
+            {visible.map((project, i) => (
               <ProjectCard
                 key={project.id}
                 project={project}
@@ -259,6 +269,42 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Show More / Show Less */}
+        {(hasMore || visibleCount > PAGE_SIZE) && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex justify-center mt-10 gap-4"
+          >
+            {hasMore && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                className="px-8 py-3 rounded-2xl font-semibold text-sm text-white
+                  bg-linear-to-r from-brand-primary to-brand-purple
+                  shadow-lg shadow-brand-primary/30 hover:shadow-brand-primary/50
+                  transition-shadow duration-300"
+              >
+                Show More
+              </motion.button>
+            )}
+            {visibleCount > PAGE_SIZE && (
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setVisibleCount(PAGE_SIZE)}
+                className="px-8 py-3 rounded-2xl font-semibold text-sm
+                  border-2 border-brand-primary/50 text-brand-primary-light
+                  hover:bg-brand-primary/10 hover:border-brand-primary
+                  transition-all duration-300"
+              >
+                Show Less
+              </motion.button>
+            )}
+          </motion.div>
+        )}
 
         {/* Placeholder note */}
         {/* <motion.p

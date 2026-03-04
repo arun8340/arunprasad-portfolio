@@ -210,6 +210,36 @@ export const projects = [
   },
   {
     id: 3,
+    title: 'ColorsStudio — Color Palette Generator',
+    description:
+      'An interactive color palette generator with multiple algorithmic modes — Analogous, Complementary, Triadic, Monochromatic and more — with CSS & Tailwind export support.',
+    longDescription:
+      'Built with Next.js and React, ColorsStudio lets designers and developers generate beautiful color palettes using various color theory algorithms. Features include lock colors, save favorites, spacebar to regenerate, and one-click export as CSS variables or Tailwind config — making it a handy tool for any design workflow.',
+    tech: ['Next.js', 'React', 'TypeScript', 'CSS'],
+    category: 'Frontend',
+    gradient: 'from-pink-500 via-orange-400 to-yellow-400',
+    liveUrl: 'https://colorstudio-nu.vercel.app/',
+    githubUrl: '#', // [PLACEHOLDER]
+    featured: true,
+    isPlaceholder: false,
+  },
+  {
+    id: 4,
+    title: "Valentine's Day Proposal — Interactive Experience",
+    description:
+      'A heartfelt interactive web experience crafted as a personalized romantic proposal, featuring a suspenseful loading sequence and an elegant, animated reveal.',
+    longDescription:
+      "Built with Next.js and styled with Playfair Display and Nunito fonts, this site creates a cinematic proposal experience. An animated countdown builds anticipation before revealing the romantic message, designed to make a special moment truly unforgettable.",
+    tech: ['Next.js', 'React', 'CSS', 'JavaScript'],
+    category: 'Frontend',
+    gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
+    liveUrl: 'https://valentines-proposal-gilt-pi.vercel.app/',
+    githubUrl: '#', // [PLACEHOLDER]
+    featured: true,
+    isPlaceholder: false,
+  },
+  {
+    id: 5,
     title: 'AnimaWeb — GSAP Experience',
     description:
       'A visually rich website featuring advanced page transition animations, scroll-based storytelling effects, and interactive UI components built with GSAP and custom JavaScript.',
@@ -224,7 +254,7 @@ export const projects = [
     isPlaceholder: false,
   },
   {
-    id: 4,
+    id: 6,
     title: 'HealthSync — Flutter Mobile App',
     description:
       '[Professional project] Cross-platform mobile application for the healthcare domain with real-time data, offline support, and intuitive UX across Android & iOS.',
@@ -239,7 +269,7 @@ export const projects = [
     isPlaceholder: true, // Marks as professional project / placeholder
   },
   {
-    id: 5,
+    id: 7,
     title: 'FlowApp — Next.js Web Application',
     description:
       'A modern web application built with Next.js and Framer Motion delivering smooth page transitions, micro-interactions, and an exceptional user experience.',
@@ -254,7 +284,7 @@ export const projects = [
     isPlaceholder: false,
   },
   {
-    id: 6,
+    id: 8,
     title: 'NimbusStore — Shopify E-Commerce',
     description:
       'A fully configured Shopify e-commerce store with custom theme, product catalogues, payment gateway integration, and store optimization.',
