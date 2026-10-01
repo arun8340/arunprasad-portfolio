@@ -20,7 +20,7 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/arunprasad-dev/',
   github: 'https://github.com/arun8340', // [PLACEHOLDER — add your GitHub profile URL]
   summary:
-    'Software Developer with 5+ years of experience, having completed my MCA, specializing in mobile, web, and backend application development. Strong experience in building cross-platform mobile applications using Flutter and Dart, and web applications using React.js and Next.js, with backend development using LoopBack 4, TypeScript, and MongoDB. Along with development, I have hands-on experience in UI/UX design. Experienced in working within Agile teams, collaborating with product, QA, and design stakeholders to deliver scalable, high-performance, and user-friendly applications.',
+    'Software Developer with 6+ years in software, 4+ as a developer, having completed my MCA, specializing in mobile, web, and backend application development. Strong experience in building cross-platform mobile applications using Flutter and Dart, and web applications using React.js and Next.js, with backend development using LoopBack 4, TypeScript, and MongoDB. Along with development, I have hands-on experience in UI/UX design. Experienced in working within Agile teams, collaborating with product, QA, and design stakeholders to deliver scalable, high-performance, and user-friendly applications.',
   resumeUrl: '/resume.pdf', // [PLACEHOLDER — link to hosted PDF resume]
 };
 
@@ -32,7 +32,7 @@ export const skillCategories = [
     colorClass: 'from-violet-500 to-purple-600',
     bgClass: 'bg-violet-500/10',
     textClass: 'text-violet-400',
-    skills: ['Flutter', 'Dart', 'Android', 'iOS'],
+    skills: ['Swift', 'UIKit', 'Core Animation', 'Flutter', 'Dart', 'Android', 'iOS'],
   },
   {
     category: 'Frontend',
@@ -179,6 +179,23 @@ export const experiences = [
 // ─── Projects ──────────────────────────────────────────────────────────────
 export const projects = [
   {
+    id: 6,
+    title: 'VitalFriend — Remote Patient Monitoring App',
+    description:
+      'A US healthcare platform that lets care teams monitor patients\' vitals remotely through connected Bluetooth devices. Live on the App Store and Google Play.',
+    longDescription:
+      'My role: Mobile app developer. I build native iOS features, redesign dashboards, and work across a 550+ endpoint backend API.',
+    tech: ['Swift', 'UIKit', 'Core Animation', 'Node.js', 'TypeScript', 'Chart.js'],
+    category: 'Mobile',
+    gradient: 'from-emerald-600 via-teal-600 to-cyan-600',
+    liveUrl: 'https://apps.apple.com/us/app/vitalfriend/id6754011583',
+    githubUrl: '#',
+    appStoreUrl: 'https://apps.apple.com/us/app/vitalfriend/id6754011583',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.vitalfriend.vitallink',
+    featured: true,
+    isPlaceholder: false,
+  },
+  {
     id: 1,
     title: 'ArkaDevelopers — Real Estate Company Site',
     description:
@@ -224,21 +241,6 @@ export const projects = [
     isPlaceholder: false,
   },
   {
-    id: 4,
-    title: "Valentine's Day Proposal — Interactive Experience",
-    description:
-      'A heartfelt interactive web experience crafted as a personalized romantic proposal, featuring a suspenseful loading sequence and an elegant, animated reveal.',
-    longDescription:
-      "Built with Next.js and styled with Playfair Display and Nunito fonts, this site creates a cinematic proposal experience. An animated countdown builds anticipation before revealing the romantic message, designed to make a special moment truly unforgettable.",
-    tech: ['Next.js', 'React', 'CSS', 'JavaScript'],
-    category: 'Frontend',
-    gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
-    liveUrl: 'https://valentines-proposal-gilt-pi.vercel.app/',
-    githubUrl: '#', // [PLACEHOLDER]
-    featured: true,
-    isPlaceholder: false,
-  },
-  {
     id: 5,
     title: 'AnimaWeb — GSAP Experience',
     description:
@@ -252,21 +254,6 @@ export const projects = [
     githubUrl: '#', // [PLACEHOLDER]
     featured: true,
     isPlaceholder: false,
-  },
-  {
-    id: 6,
-    title: 'HealthSync — Flutter Mobile App',
-    description:
-      '[Professional project] Cross-platform mobile application for the healthcare domain with real-time data, offline support, and intuitive UX across Android & iOS.',
-    longDescription:
-      'Built with Flutter and Dart, consuming LoopBack 4 REST APIs. Features include patient data management, appointment scheduling, offline-first architecture using local database caching, and push notifications.',
-    tech: ['Flutter', 'Dart', 'LoopBack 4', 'MongoDB', 'REST API'],
-    category: 'Mobile',
-    gradient: 'from-emerald-600 via-teal-600 to-cyan-600',
-    liveUrl: '#', // [PLACEHOLDER]
-    githubUrl: '#', // [PLACEHOLDER]
-    featured: false,
-    isPlaceholder: true, // Marks as professional project / placeholder
   },
   {
     id: 7,
@@ -294,6 +281,25 @@ export const projects = [
     category: 'E-Commerce',
     gradient: 'from-orange-600 via-amber-600 to-yellow-600',
     liveUrl: '#', // [PLACEHOLDER]
+    githubUrl: '#', // [PLACEHOLDER]
+    featured: false,
+    isPlaceholder: false,
+  },
+];
+
+// ─── Playground — small personal experiments ──────────────────────────────
+export const playground = [
+  {
+    id: 4,
+    title: "Valentine's Day Proposal — Interactive Experience",
+    description:
+      'A heartfelt interactive web experience crafted as a personalized romantic proposal, featuring a suspenseful loading sequence and an elegant, animated reveal.',
+    longDescription:
+      "Built with Next.js and styled with Playfair Display and Nunito fonts, this site creates a cinematic proposal experience. An animated countdown builds anticipation before revealing the romantic message, designed to make a special moment truly unforgettable.",
+    tech: ['Next.js', 'React', 'CSS', 'JavaScript'],
+    category: 'Frontend',
+    gradient: 'from-rose-500 via-pink-500 to-fuchsia-500',
+    liveUrl: 'https://valentines-proposal-gilt-pi.vercel.app/',
     githubUrl: '#', // [PLACEHOLDER]
     featured: false,
     isPlaceholder: false,
@@ -346,7 +352,7 @@ export const certifications = [
 
 // ─── Key stats ─────────────────────────────────────────────────────────────
 export const stats = [
-  { label: 'Years Experience', value: '5+', icon: '⚡' },
+  { label: 'Years in Software', value: '6+', icon: '⚡' },
   { label: 'Projects Delivered', value: '15+', icon: '🚀' },
   { label: 'Technologies', value: '20+', icon: '🛠️' },
   { label: 'Certifications', value: '2', icon: '🏅' },
@@ -358,5 +364,6 @@ export const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Playground', href: '#playground' },
   { label: 'Contact', href: '#contact' },
 ];

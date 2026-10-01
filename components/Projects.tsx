@@ -85,14 +85,39 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
 
           {/* Actions */}
           <div className="flex gap-3">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl
-                font-semibold text-sm text-white
-                bg-gradient-to-r from-brand-primary to-brand-purple
-                hover:opacity-90 transition-opacity">
-              <ExternalLink size={15} />
-              Live Demo
-            </a>
+            {project.appStoreUrl || project.playStoreUrl ? (
+              <>
+                {project.appStoreUrl && (
+                  <a href={project.appStoreUrl} target="_blank" rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl
+                      font-semibold text-sm text-white
+                      bg-gradient-to-r from-brand-primary to-brand-purple
+                      hover:opacity-90 transition-opacity">
+                    <ExternalLink size={15} />
+                    App Store
+                  </a>
+                )}
+                {project.playStoreUrl && (
+                  <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl
+                      font-semibold text-sm text-white
+                      bg-gradient-to-r from-brand-primary to-brand-purple
+                      hover:opacity-90 transition-opacity">
+                    <ExternalLink size={15} />
+                    Google Play
+                  </a>
+                )}
+              </>
+            ) : (
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl
+                  font-semibold text-sm text-white
+                  bg-gradient-to-r from-brand-primary to-brand-purple
+                  hover:opacity-90 transition-opacity">
+                <ExternalLink size={15} />
+                Live Demo
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
