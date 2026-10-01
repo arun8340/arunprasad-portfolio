@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'TypeScript',
     'MongoDB',
   ],
-  authors: [{ name: 'Molleti Venkata Arun Prasad', url: 'https://www.linkedin.com/in/arun-prasad-b6ab071aa/' }],
+  authors: [{ name: 'Molleti Venkata Arun Prasad', url: 'https://www.linkedin.com/in/arunprasad-dev/' }],
   creator: 'Molleti Venkata Arun Prasad',
   openGraph: {
     type: 'website',

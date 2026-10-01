@@ -17,7 +17,7 @@ export const personalInfo = {
   location: 'Visakhapatnam, India',
   email: 'arunfrnds80@gmail.com',
   phone: '+91 8340888770',
-  linkedin: 'https://www.linkedin.com/in/arun-prasad-b6ab071aa/',
+  linkedin: 'https://www.linkedin.com/in/arunprasad-dev/',
   github: 'https://github.com/arun8340', // [PLACEHOLDER — add your GitHub profile URL]
   summary:
     'Software Developer with 5+ years of experience, having completed my MCA, specializing in mobile, web, and backend application development. Strong experience in building cross-platform mobile applications using Flutter and Dart, and web applications using React.js and Next.js, with backend development using LoopBack 4, TypeScript, and MongoDB. Along with development, I have hands-on experience in UI/UX design. Experienced in working within Agile teams, collaborating with product, QA, and design stakeholders to deliver scalable, high-performance, and user-friendly applications.',
